@@ -36,27 +36,12 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GK7-T0-zWd" id="8Zz-du-R7F">
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingrese el Nombre del Artista:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAX-4n-e1n">
-                                                    <rect key="frame" x="28" y="11" width="246" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mPG-p2-IPb">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mPG-p2-IPb" id="hhQ-0f-Rch">
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r0R-UV-jyN">
-                                                    <rect key="frame" x="26" y="7" width="309" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -70,7 +55,7 @@
                     <navigationItem key="navigationItem" title="Spotify Streamer" id="ZkC-Pm-ySN">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="F8v-Pe-4Jj">
                             <connections>
-                                <segue destination="8sS-lJ-wWg" kind="show" id="hb2-2J-CFq"/>
+                                <segue destination="8sS-lJ-wWg" kind="show" id="Ckf-JY-sQ2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -88,7 +73,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="xes-5B-sJw" kind="show" id="P9L-6Y-xhM"/>
+                        <segue destination="xes-5B-sJw" kind="relationship" relationship="rootViewController" id="3HY-4C-d1N"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCP-ay-yLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
