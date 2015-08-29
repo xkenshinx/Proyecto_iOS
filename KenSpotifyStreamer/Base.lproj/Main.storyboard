@@ -46,7 +46,7 @@
                     <navigationItem key="navigationItem" title="Spotify Streamer" id="NGw-B5-b8p">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="Rcw-x7-FtR">
                             <connections>
-                                <segue destination="xes-5B-sJw" kind="push" id="Ihc-vM-Lzm"/>
+                                <segue destination="8sS-lJ-wWg" kind="modal" id="oz8-jq-HEt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -59,6 +59,7 @@
         <scene sceneID="sIO-IP-3BM">
             <objects>
                 <navigationController id="8sS-lJ-wWg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NH1-aI-0Gh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uOa-1t-R06">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -91,9 +92,9 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="rFG-Da-QEh" firstAttribute="top" secondItem="8r3-IL-J3x" secondAttribute="topMargin" constant="1" id="5jo-Np-wxG"/>
-                                        <constraint firstItem="rFG-Da-QEh" firstAttribute="trailing" secondItem="8r3-IL-J3x" secondAttribute="trailingMargin" constant="1" id="HZn-a8-y6V"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="rFG-Da-QEh" secondAttribute="bottom" constant="1" id="hA6-d2-bAt"/>
+                                        <constraint firstItem="rFG-Da-QEh" firstAttribute="top" secondItem="8r3-IL-J3x" secondAttribute="topMargin" constant="1" id="9jI-lF-43b"/>
+                                        <constraint firstItem="rFG-Da-QEh" firstAttribute="trailing" secondItem="8r3-IL-J3x" secondAttribute="trailingMargin" constant="1" id="ZmE-2b-4zc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="rFG-Da-QEh" secondAttribute="bottom" constant="1" id="dlB-Qe-3VG"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -145,6 +146,16 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="taY-V0-PBh" id="Tzr-P6-fFV">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVf-iO-nki">
+                                            <rect key="frame" x="261" y="4" width="51" height="35"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="OVf-iO-nki" secondAttribute="bottom" constant="1" id="9Oh-9B-bAJ"/>
+                                        <constraint firstItem="OVf-iO-nki" firstAttribute="trailing" secondItem="Tzr-P6-fFV" secondAttribute="trailingMargin" constant="1" id="CYT-hh-cGw"/>
+                                        <constraint firstItem="OVf-iO-nki" firstAttribute="top" secondItem="Tzr-P6-fFV" secondAttribute="topMargin" constant="1" id="kWd-R8-FEc"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -162,7 +173,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmb-9p-42J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604.8" y="267.90666666666664"/>
+            <point key="canvasLocation" x="1604" y="267"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="Oi7-Yx-L3h">
@@ -180,7 +191,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="Ihc-vM-Lzm"/>
-    </inferredMetricsTieBreakers>
 </document>

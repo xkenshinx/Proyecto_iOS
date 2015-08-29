@@ -15,6 +15,10 @@
 		9435C82A1B7FE25F00516DA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9435C8281B7FE25F00516DA7 /* LaunchScreen.xib */; };
 		9435C8361B7FE25F00516DA7 /* KenSpotifyStreamerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9435C8351B7FE25F00516DA7 /* KenSpotifyStreamerTests.m */; };
 		9435C8461B7FF6BF00516DA7 /* ArtistaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9435C8451B7FF6BF00516DA7 /* ArtistaViewController.m */; };
+		94474B481B8FA4590069E35B /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94474B471B8FA4590069E35B /* Spotify.framework */; };
+		94474B4E1B8FA8910069E35B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94474B4D1B8FA8910069E35B /* AVFoundation.framework */; };
+		94474B501B8FA8AB0069E35B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94474B4F1B8FA8AB0069E35B /* SystemConfiguration.framework */; };
+		945192321B90E9530020C19E /* Artista.m in Sources */ = {isa = PBXBuildFile; fileRef = 945192311B90E9530020C19E /* Artista.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,11 @@
 		9435C8351B7FE25F00516DA7 /* KenSpotifyStreamerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KenSpotifyStreamerTests.m; sourceTree = "<group>"; };
 		9435C8441B7FF6BF00516DA7 /* ArtistaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArtistaViewController.h; path = "View Controllers/ArtistaViewController.h"; sourceTree = "<group>"; };
 		9435C8451B7FF6BF00516DA7 /* ArtistaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArtistaViewController.m; path = "View Controllers/ArtistaViewController.m"; sourceTree = "<group>"; };
+		94474B471B8FA4590069E35B /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spotify.framework; path = Frameworks/Spotify.framework; sourceTree = "<group>"; };
+		94474B4D1B8FA8910069E35B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		94474B4F1B8FA8AB0069E35B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		945192301B90E9530020C19E /* Artista.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Artista.h; path = "Data Model/Artista.h"; sourceTree = "<group>"; };
+		945192311B90E9530020C19E /* Artista.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Artista.m; path = "Data Model/Artista.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94474B501B8FA8AB0069E35B /* SystemConfiguration.framework in Frameworks */,
+				94474B4E1B8FA8910069E35B /* AVFoundation.framework in Frameworks */,
+				94474B481B8FA4590069E35B /* Spotify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +78,8 @@
 		9435C80D1B7FE25E00516DA7 = {
 			isa = PBXGroup;
 			children = (
+				94474B4F1B8FA8AB0069E35B /* SystemConfiguration.framework */,
+				94474B4D1B8FA8910069E35B /* AVFoundation.framework */,
 				9435C8181B7FE25E00516DA7 /* KenSpotifyStreamer */,
 				9435C8321B7FE25F00516DA7 /* KenSpotifyStreamerTests */,
 				9435C8171B7FE25E00516DA7 /* Products */,
@@ -84,6 +98,7 @@
 		9435C8181B7FE25E00516DA7 /* KenSpotifyStreamer */ = {
 			isa = PBXGroup;
 			children = (
+				94474B441B8FA39C0069E35B /* Frameworks */,
 				9435C8401B7FE77900516DA7 /* Data Model */,
 				9435C83F1B7FE44500516DA7 /* View Controllers */,
 				9435C81D1B7FE25F00516DA7 /* AppDelegate.h */,
@@ -136,8 +151,18 @@
 		9435C8401B7FE77900516DA7 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				945192301B90E9530020C19E /* Artista.h */,
+				945192311B90E9530020C19E /* Artista.m */,
 			);
 			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		94474B441B8FA39C0069E35B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94474B471B8FA4590069E35B /* Spotify.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +268,7 @@
 			files = (
 				9435C8221B7FE25F00516DA7 /* ViewController.m in Sources */,
 				9435C8461B7FF6BF00516DA7 /* ArtistaViewController.m in Sources */,
+				945192321B90E9530020C19E /* Artista.m in Sources */,
 				9435C81F1B7FE25F00516DA7 /* AppDelegate.m in Sources */,
 				9435C81C1B7FE25E00516DA7 /* main.m in Sources */,
 			);
@@ -373,8 +399,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KenSpotifyStreamer/ios-sdk-beta-10",
+					"$(PROJECT_DIR)/KenSpotifyStreamer",
+					"$(PROJECT_DIR)/KenSpotifyStreamer/Frameworks",
+				);
 				INFOPLIST_FILE = KenSpotifyStreamer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -384,8 +417,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KenSpotifyStreamer/ios-sdk-beta-10",
+					"$(PROJECT_DIR)/KenSpotifyStreamer",
+					"$(PROJECT_DIR)/KenSpotifyStreamer/Frameworks",
+				);
 				INFOPLIST_FILE = KenSpotifyStreamer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -443,6 +483,7 @@
 				9435C83B1B7FE25F00516DA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9435C83C1B7FE25F00516DA7 /* Build configuration list for PBXNativeTarget "KenSpotifyStreamerTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +492,7 @@
 				9435C83E1B7FE25F00516DA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
