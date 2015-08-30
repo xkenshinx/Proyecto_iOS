@@ -21,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-371.73333333333335" y="267.90666666666664"/>
         </scene>
-        <!--Spotify Streamer-->
+        <!--Artista-->
         <scene sceneID="3eI-vj-xRg">
             <objects>
                 <tableViewController id="CoJ-Ut-O8U" sceneMemberID="viewController">
@@ -29,12 +29,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="EjP-aX-xgN">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7C6-Es-Btv">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7C6-Es-Btv" id="7Td-ki-VTf">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CkD-Bt-6fP">
+                                            <rect key="frame" x="243" y="4" width="69" height="35"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="CkD-Bt-6fP" secondAttribute="bottom" constant="1" id="Tip-gQ-oYZ"/>
+                                        <constraint firstItem="CkD-Bt-6fP" firstAttribute="top" secondItem="7Td-ki-VTf" secondAttribute="topMargin" constant="-4" id="va6-df-5Mh"/>
+                                        <constraint firstItem="CkD-Bt-6fP" firstAttribute="trailing" secondItem="7Td-ki-VTf" secondAttribute="trailingMargin" id="zeC-CS-1ZA"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -43,83 +58,20 @@
                             <outlet property="delegate" destination="CoJ-Ut-O8U" id="8gt-OX-VJ5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Spotify Streamer" id="NGw-B5-b8p">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="Rcw-x7-FtR">
-                            <connections>
-                                <segue destination="8sS-lJ-wWg" kind="modal" id="oz8-jq-HEt"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Artista" id="NGw-B5-b8p"/>
+                    <connections>
+                        <segue destination="a1t-4S-lxS" kind="modal" id="ifa-r7-7Cg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPL-go-pbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30.933333333333334" y="267.90666666666664"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="sIO-IP-3BM">
-            <objects>
-                <navigationController id="8sS-lJ-wWg" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="NH1-aI-0Gh"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uOa-1t-R06">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="xes-5B-sJw" kind="relationship" relationship="rootViewController" id="3HY-4C-d1N"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YCP-ay-yLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="420" y="267"/>
-        </scene>
-        <!--Artista-->
-        <scene sceneID="7xj-b7-qaj">
-            <objects>
-                <tableViewController id="xes-5B-sJw" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PLM-Id-39f">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="R0v-KZ-So0">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R0v-KZ-So0" id="8r3-IL-J3x">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFG-Da-QEh">
-                                            <rect key="frame" x="258" y="4" width="54" height="35"/>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="rFG-Da-QEh" firstAttribute="top" secondItem="8r3-IL-J3x" secondAttribute="topMargin" constant="1" id="9jI-lF-43b"/>
-                                        <constraint firstItem="rFG-Da-QEh" firstAttribute="trailing" secondItem="8r3-IL-J3x" secondAttribute="trailingMargin" constant="1" id="ZmE-2b-4zc"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="rFG-Da-QEh" secondAttribute="bottom" constant="1" id="dlB-Qe-3VG"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="xes-5B-sJw" id="4oJ-ym-wpn"/>
-                            <outlet property="delegate" destination="xes-5B-sJw" id="mTO-J6-fa1"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Artista" id="7QC-p3-3E9">
-                        <barButtonItem key="backBarButtonItem" title="Atras" id="Ket-vO-QuV"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="nIc-35-94n"/>
-                    </navigationItem>
-                    <connections>
-                        <segue destination="a1t-4S-lxS" kind="modal" id="7hs-kk-GWI"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LRx-Yf-8hu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="820" y="267"/>
+            <point key="canvasLocation" x="30" y="267"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="80r-NQ-VCV">
             <objects>
                 <navigationController id="a1t-4S-lxS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RAa-VW-PVr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YYM-pa-HMI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -130,9 +82,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5vN-yH-9ts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215.4666666666667" y="267.90666666666664"/>
+            <point key="canvasLocation" x="459" y="267"/>
         </scene>
-        <!--Canciones-->
+        <!--Canciones Top-->
         <scene sceneID="YeX-v1-A9w">
             <objects>
                 <tableViewController id="26e-Pv-YHV" sceneMemberID="viewController">
@@ -148,7 +100,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVf-iO-nki">
-                                            <rect key="frame" x="261" y="4" width="51" height="35"/>
+                                            <rect key="frame" x="248" y="4" width="64" height="35"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -157,6 +109,9 @@
                                         <constraint firstItem="OVf-iO-nki" firstAttribute="top" secondItem="Tzr-P6-fFV" secondAttribute="topMargin" constant="1" id="kWd-R8-FEc"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="onS-gq-iwi" kind="modal" id="SQE-6M-5Ty"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -164,16 +119,13 @@
                             <outlet property="delegate" destination="26e-Pv-YHV" id="AqS-x1-5RQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Canciones" id="c2z-Vc-SHy">
+                    <navigationItem key="navigationItem" title="Canciones Top" id="c2z-Vc-SHy">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="Fz3-pV-boF"/>
                     </navigationItem>
-                    <connections>
-                        <segue destination="onS-gq-iwi" kind="push" id="GyP-Nv-AJf"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmb-9p-42J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="267"/>
+            <point key="canvasLocation" x="866" y="267"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="Oi7-Yx-L3h">
@@ -183,7 +135,7 @@
                 </avPlayerViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhY-pR-3sl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1995.2" y="267.90666666666664"/>
+            <point key="canvasLocation" x="1257" y="267"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
