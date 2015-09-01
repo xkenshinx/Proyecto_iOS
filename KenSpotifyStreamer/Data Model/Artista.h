@@ -10,7 +10,7 @@
 
 @interface Artista : NSObject
 
-@property (nonatomic,strong) NSString* artista;
+@property (nonatomic,strong) NSArray* artista;
 @property (nonatomic,strong) NSArray* cancion;
 
 +(NSArray*)getListaArtistas;

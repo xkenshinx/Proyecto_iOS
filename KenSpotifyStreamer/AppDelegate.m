@@ -8,7 +8,6 @@
 
 //Import de Spotify Library
 #import <Spotify/Spotify.h>
-
 #import "AppDelegate.h"
 
 
