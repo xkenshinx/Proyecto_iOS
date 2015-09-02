@@ -19,6 +19,8 @@
 		94474B4E1B8FA8910069E35B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94474B4D1B8FA8910069E35B /* AVFoundation.framework */; };
 		94474B501B8FA8AB0069E35B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94474B4F1B8FA8AB0069E35B /* SystemConfiguration.framework */; };
 		945192321B90E9530020C19E /* Artista.m in Sources */ = {isa = PBXBuildFile; fileRef = 945192311B90E9530020C19E /* Artista.m */; };
+		94B7AE961B9685F500F1EE04 /* ArtistaCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B7AE951B9685F500F1EE04 /* ArtistaCustomCell.m */; };
+		94B7AE991B968E7E00F1EE04 /* SpotifySession.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B7AE981B968E7E00F1EE04 /* SpotifySession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,10 @@
 		94474B4F1B8FA8AB0069E35B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		945192301B90E9530020C19E /* Artista.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Artista.h; path = "Data Model/Artista.h"; sourceTree = "<group>"; };
 		945192311B90E9530020C19E /* Artista.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Artista.m; path = "Data Model/Artista.m"; sourceTree = "<group>"; };
+		94B7AE941B9685F500F1EE04 /* ArtistaCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArtistaCustomCell.h; path = "View Controllers/ArtistaCustomCell.h"; sourceTree = "<group>"; };
+		94B7AE951B9685F500F1EE04 /* ArtistaCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArtistaCustomCell.m; path = "View Controllers/ArtistaCustomCell.m"; sourceTree = "<group>"; };
+		94B7AE971B968E7E00F1EE04 /* SpotifySession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpotifySession.h; path = Frameworks/SpotifySession.h; sourceTree = "<group>"; };
+		94B7AE981B968E7E00F1EE04 /* SpotifySession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpotifySession.m; path = Frameworks/SpotifySession.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,8 @@
 			children = (
 				9435C8441B7FF6BF00516DA7 /* ArtistaViewController.h */,
 				9435C8451B7FF6BF00516DA7 /* ArtistaViewController.m */,
+				94B7AE941B9685F500F1EE04 /* ArtistaCustomCell.h */,
+				94B7AE951B9685F500F1EE04 /* ArtistaCustomCell.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -161,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				94474B471B8FA4590069E35B /* Spotify.framework */,
+				94B7AE971B968E7E00F1EE04 /* SpotifySession.h */,
+				94B7AE981B968E7E00F1EE04 /* SpotifySession.m */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -269,8 +279,10 @@
 				9435C8221B7FE25F00516DA7 /* ViewController.m in Sources */,
 				9435C8461B7FF6BF00516DA7 /* ArtistaViewController.m in Sources */,
 				945192321B90E9530020C19E /* Artista.m in Sources */,
+				94B7AE991B968E7E00F1EE04 /* SpotifySession.m in Sources */,
 				9435C81F1B7FE25F00516DA7 /* AppDelegate.m in Sources */,
 				9435C81C1B7FE25E00516DA7 /* main.m in Sources */,
+				94B7AE961B9685F500F1EE04 /* ArtistaCustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

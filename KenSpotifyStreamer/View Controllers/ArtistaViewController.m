@@ -7,6 +7,9 @@
 //
 
 #import "ArtistaViewController.h"
+#import <Spotify/Spotify.h>
+#import "ArtistaCustomCell.h"
+#import "SpotifySession.h"
 
 @interface ArtistaViewController ()
 
@@ -96,5 +99,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

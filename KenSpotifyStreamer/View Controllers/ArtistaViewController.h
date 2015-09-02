@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Spotify/Spotify.h>
+#import <Foundation/Foundation.h>
 
-@interface ArtistaViewController : UITableViewController
+@interface ArtistaViewController : UITableViewController <UISearchBarDelegate>
+@property(nonatomic, strong) IBOutlet UISearchBar* ArtistaSearchBar;
+
+
 
 @end

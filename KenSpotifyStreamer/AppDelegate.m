@@ -9,12 +9,14 @@
 //Import de Spotify Library
 #import <Spotify/Spotify.h>
 #import "AppDelegate.h"
-
+#import "SpotifySession.h"
 
 @interface AppDelegate ()
 
 //Propiedades de Session y Audio Streaming de Spotify
-@property (nonatomic, strong) SPTSession *session;
+
+
+@property (nonatomic, strong) SPTSession *sessionInicial;
 @property (nonatomic, strong) SPTAudioStreamingController *player;
 
 @end
@@ -51,7 +53,7 @@
     
     // Ask SPTAuth if the URL given is a Spotify authentication callback
     if ([[SPTAuth defaultInstance] canHandleURL:url]) {
-        [[SPTAuth defaultInstance] handleAuthCallbackWithTriggeredAuthURL:url callback:^(NSError *error, SPTSession *session) {
+        [[SPTAuth defaultInstance] handleAuthCallbackWithTriggeredAuthURL:url callback:^(NSError *error, SPTSession *sessionInicial) {
             
             if (error != nil) {
                 NSLog(@"*** Auth error: %@", error);
@@ -59,7 +61,12 @@
             }
             
             // Call the -playUsingSession: method to play a track
-            [self playUsingSession:session];
+            // Comentado el Sample Streaming
+            //[self playUsingSession:session];
+            
+            //Load Variable Global de Session
+            [SpotifySession setSession:sessionInicial];
+            
         }];
         return YES;
     }
@@ -67,6 +74,7 @@
     return NO;
 }
 
+/* Funcion Commentada de Sample Streaming del SKD
 
 -(void)playUsingSession:(SPTSession *)session {
     
@@ -90,6 +98,8 @@
         }];
     }];
 }
+ 
+*/
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
