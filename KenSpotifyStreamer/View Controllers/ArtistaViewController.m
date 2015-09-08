@@ -13,18 +13,15 @@
 
 @interface ArtistaViewController ()
 
+@property (nonatomic,strong) NSMutableArray* artistas;
+
 @end
 
 @implementation ArtistaViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.ArtistaSearchBar.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,18 +29,65 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Search Bar and Spotify Search
+
+-(void) searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    NSLog(@"Texto en el Search: \n%@", searchBar.text);
+    [SpotifySession buscaArtista:searchBar.text withTarget:self];
+}
+
+-(void) updateArtista:(NSMutableArray *)nuevoArtista{
+    self.artistas = nuevoArtista;
+    [self.tableView reloadData];
+}
+
+/*-(void) requestBusquedaArtista:(NSString *)nombreArtista{
+    [SpotifySession buscaArtista];
+}
+*/
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+        return self.artistas.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ArtistaCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArtistaCustomCell" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    SPTArtist* artist = self.artistas[indexPath.row];
+    cell.nombreArtista.text = artist.name;
+    
+    if ([artist.images count] > 0) {
+        SPTImage* image = [artist.images objectAtIndex:0];
+        dispatch_async(dispatch_get_global_queue(0,0), ^{
+            NSData * data = [[NSData alloc] initWithContentsOfURL: image.imageURL];
+            if ( data == nil ){
+                NSLog(@"Error en Imagen del Artista %@ ", artist.name);
+                return;
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                cell.ImagenArtista.image = [UIImage imageWithData: data];
+            });
+        });
+    }
+    else{
+        NSLog(@"No hay imagenes en el Artista %@ ", artist.name);
+    }
+    return cell;
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
 }
 
 /*

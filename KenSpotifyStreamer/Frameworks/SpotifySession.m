@@ -26,7 +26,7 @@ static SPTSession* session = nil;
              NSArray* results = [(SPTListPage*)object items];
              NSMutableArray* mResults = [NSMutableArray arrayWithArray:results];
              NSLog(@"Resultados del Search: \n%@", results);
-             //[target updateArtists:mResults];
+             [target updateArtista:mResults];
              
          }];
     }

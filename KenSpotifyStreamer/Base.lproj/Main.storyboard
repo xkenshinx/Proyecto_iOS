@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xBZ-sI-iOs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xBZ-sI-iOs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -41,24 +40,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CkD-Bt-6fP">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CkD-Bt-6fP">
                                             <rect key="frame" x="243" y="4" width="69" height="35"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Artist Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jki-MM-nYe">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jki-MM-nYe">
                                             <rect key="frame" x="8" y="11" width="227" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Jki-MM-nYe" firstAttribute="leading" secondItem="7Td-ki-VTf" secondAttribute="leadingMargin" constant="1" id="1Jz-ed-A6C"/>
-                                        <constraint firstItem="Jki-MM-nYe" firstAttribute="top" secondItem="7Td-ki-VTf" secondAttribute="topMargin" constant="1" id="3Sa-iF-isY"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Jki-MM-nYe" secondAttribute="bottom" constant="1" id="3aG-v6-4EG"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="CkD-Bt-6fP" secondAttribute="bottom" constant="1" id="Tip-gQ-oYZ"/>
-                                        <constraint firstItem="CkD-Bt-6fP" firstAttribute="top" secondItem="7Td-ki-VTf" secondAttribute="topMargin" constant="-4" id="va6-df-5Mh"/>
-                                        <constraint firstItem="CkD-Bt-6fP" firstAttribute="trailing" secondItem="7Td-ki-VTf" secondAttribute="trailingMargin" id="zeC-CS-1ZA"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -108,24 +99,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVf-iO-nki">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVf-iO-nki">
                                             <rect key="frame" x="248" y="4" width="64" height="35"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Top Canciones" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgA-Dc-4lU">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Top Canciones" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgA-Dc-4lU">
                                             <rect key="frame" x="8" y="11" width="227" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="OVf-iO-nki" secondAttribute="bottom" constant="1" id="9Oh-9B-bAJ"/>
-                                        <constraint firstItem="OVf-iO-nki" firstAttribute="trailing" secondItem="Tzr-P6-fFV" secondAttribute="trailingMargin" constant="1" id="CYT-hh-cGw"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="kgA-Dc-4lU" secondAttribute="bottom" constant="1" id="PiX-0p-mXi"/>
-                                        <constraint firstItem="kgA-Dc-4lU" firstAttribute="top" secondItem="Tzr-P6-fFV" secondAttribute="topMargin" constant="1" id="VeQ-b7-Tfu"/>
-                                        <constraint firstItem="OVf-iO-nki" firstAttribute="top" secondItem="Tzr-P6-fFV" secondAttribute="topMargin" constant="1" id="kWd-R8-FEc"/>
-                                        <constraint firstItem="kgA-Dc-4lU" firstAttribute="leading" secondItem="Tzr-P6-fFV" secondAttribute="leadingMargin" constant="1" id="wdt-dV-nye"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="onS-gq-iwi" kind="modal" id="SQE-6M-5Ty"/>

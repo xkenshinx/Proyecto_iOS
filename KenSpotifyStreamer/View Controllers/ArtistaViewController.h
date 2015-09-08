@@ -13,6 +13,8 @@
 @interface ArtistaViewController : UITableViewController <UISearchBarDelegate>
 @property(nonatomic, strong) IBOutlet UISearchBar* ArtistaSearchBar;
 
+-(void) updateArtista:(NSMutableArray*)nuevoArtista;
 
+//-(void) requestBusquedaArtista:(NSString*)nombreArtista;
 
 @end
