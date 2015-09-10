@@ -37,6 +37,7 @@
     [application performSelector:@selector(openURL:)
                       withObject:loginURL afterDelay:0.1];
     
+    NSLog(@"Logging Spotify en Safari");
     return YES;
 }
 
