@@ -29,41 +29,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="EjP-aX-xgN">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Busqueda de Artista" id="EjP-aX-xgN">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistaCustomCell" rowHeight="64" id="7C6-Es-Btv">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ArtistaCustomCell" rowHeight="64" id="7C6-Es-Btv" customClass="ArtistaCustomCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7C6-Es-Btv" id="7Td-ki-VTf">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CkD-Bt-6fP">
-                                            <rect key="frame" x="243" y="5" width="69" height="53"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="69" id="R8b-3g-yhS"/>
-                                            </constraints>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CkD-Bt-6fP">
+                                            <rect key="frame" x="210" y="5" width="77" height="53"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Artist Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jki-MM-nYe">
-                                            <rect key="frame" x="8" y="5" width="227" height="53"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jki-MM-nYe">
+                                            <rect key="frame" x="8" y="5" width="194" height="53"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="CkD-Bt-6fP" firstAttribute="top" secondItem="Jki-MM-nYe" secondAttribute="top" id="0Ae-wK-xTN"/>
-                                        <constraint firstItem="CkD-Bt-6fP" firstAttribute="leading" secondItem="Jki-MM-nYe" secondAttribute="trailing" constant="8" symbolic="YES" id="5BC-vD-RUR"/>
-                                        <constraint firstItem="Jki-MM-nYe" firstAttribute="top" secondItem="7Td-ki-VTf" secondAttribute="topMargin" constant="-3" id="AbI-18-GKo"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="CkD-Bt-6fP" secondAttribute="trailing" constant="-7" id="bOH-ZF-zSs"/>
-                                        <constraint firstItem="Jki-MM-nYe" firstAttribute="bottom" secondItem="CkD-Bt-6fP" secondAttribute="bottom" id="h38-yg-jDj"/>
-                                        <constraint firstItem="Jki-MM-nYe" firstAttribute="leading" secondItem="7Td-ki-VTf" secondAttribute="leadingMargin" constant="-7" id="szc-Pb-dTA"/>
-                                        <constraint firstItem="CkD-Bt-6fP" firstAttribute="centerY" secondItem="7Td-ki-VTf" secondAttribute="centerY" id="yOP-Fd-LX9"/>
-                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ImagenArtista" destination="CkD-Bt-6fP" id="n2s-hB-NUs"/>
+                                    <outlet property="nombreArtista" destination="Jki-MM-nYe" id="p50-1e-P3v"/>
+                                    <segue destination="a1t-4S-lxS" kind="push" identifier="segueCancion" id="3Hj-Yc-eGz"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -73,7 +66,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Artista" id="NGw-B5-b8p"/>
                     <connections>
-                        <segue destination="a1t-4S-lxS" kind="modal" id="ifa-r7-7Cg"/>
+                        <outlet property="ArtistaSearchBar" destination="EjP-aX-xgN" id="qPP-Wj-qTw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPL-go-pbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

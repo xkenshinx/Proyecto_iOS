@@ -31,7 +31,7 @@ static SPTSession* session = nil;
          }];
     }
     else{
-        NSLog(@"Session was nil");
+        NSLog(@"Session Nula!");
     }
     
 }
