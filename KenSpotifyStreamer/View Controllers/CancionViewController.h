@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Spotify/Spotify.h>
+#import <Foundation/Foundation.h>
 
 @interface CancionViewController : UITableViewController
+
+@property (nonatomic, strong) SPTArtist* artista;
+@property (nonatomic,strong) NSMutableArray* canciones;
+
+-(void) updateCanciones:(NSMutableArray*) nuevaCancion;
 
 @end

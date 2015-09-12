@@ -36,6 +36,19 @@ static SPTSession* session = nil;
     
 }
 
+
++(void) buscaTopSongs:(SPTArtist *)artista withTarget:(CancionViewController *)target{
+    [artista requestTopTracksForTerritory:@"us" withSession:[self getSession] callback:^(NSError *error, id object) {
+        if (error != nil) {
+            NSLog(@"Error Buscando las Canciones Top %@. Error:\n%@", artista.name, error);
+            return;
+        }
+        NSArray* results = object;
+        NSMutableArray* mResults = [NSMutableArray arrayWithArray:results];
+        [target updateCanciones:mResults];
+    }];
+}
+
 +(SPTSession*) getSession{
     return session;
 }

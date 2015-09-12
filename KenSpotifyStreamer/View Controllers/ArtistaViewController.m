@@ -10,6 +10,7 @@
 #import <Spotify/Spotify.h>
 #import "ArtistaCustomCell.h"
 #import "SpotifySession.h"
+#import "CancionViewController.h"
 
 @interface ArtistaViewController ()
 
@@ -87,7 +88,16 @@
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
+   
+    if ([segue.identifier isEqualToString:@"segueCancion"]) {
+        NSLog(@"Lanzando Segue");
+        NSIndexPath* indexPath = [self.tableView indexPathForCell:sender];
+        SPTArtist* artista = [self.artistas objectAtIndex:indexPath.row];
+
+        CancionViewController* cancionListController = segue.destinationViewController;
+        
+        cancionListController.artista = artista;
+    }
 }
 
 

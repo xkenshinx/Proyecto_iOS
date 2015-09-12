@@ -15,6 +15,7 @@
 		9435C82A1B7FE25F00516DA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9435C8281B7FE25F00516DA7 /* LaunchScreen.xib */; };
 		9435C8361B7FE25F00516DA7 /* KenSpotifyStreamerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9435C8351B7FE25F00516DA7 /* KenSpotifyStreamerTests.m */; };
 		9435C8461B7FF6BF00516DA7 /* ArtistaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9435C8451B7FF6BF00516DA7 /* ArtistaViewController.m */; };
+		944032E91BA3BB930040D1B7 /* CancionCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 944032E81BA3BB930040D1B7 /* CancionCustomCell.m */; };
 		94474B481B8FA4590069E35B /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94474B471B8FA4590069E35B /* Spotify.framework */; };
 		94474B4E1B8FA8910069E35B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94474B4D1B8FA8910069E35B /* AVFoundation.framework */; };
 		94474B501B8FA8AB0069E35B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94474B4F1B8FA8AB0069E35B /* SystemConfiguration.framework */; };
@@ -50,6 +51,8 @@
 		9435C8351B7FE25F00516DA7 /* KenSpotifyStreamerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KenSpotifyStreamerTests.m; sourceTree = "<group>"; };
 		9435C8441B7FF6BF00516DA7 /* ArtistaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArtistaViewController.h; path = "View Controllers/ArtistaViewController.h"; sourceTree = "<group>"; };
 		9435C8451B7FF6BF00516DA7 /* ArtistaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArtistaViewController.m; path = "View Controllers/ArtistaViewController.m"; sourceTree = "<group>"; };
+		944032E71BA3BB930040D1B7 /* CancionCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CancionCustomCell.h; path = "View Controllers/CancionCustomCell.h"; sourceTree = "<group>"; };
+		944032E81BA3BB930040D1B7 /* CancionCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CancionCustomCell.m; path = "View Controllers/CancionCustomCell.m"; sourceTree = "<group>"; };
 		94474B471B8FA4590069E35B /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spotify.framework; path = Frameworks/Spotify.framework; sourceTree = "<group>"; };
 		94474B4D1B8FA8910069E35B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		94474B4F1B8FA8AB0069E35B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -157,6 +160,8 @@
 				94B7AE951B9685F500F1EE04 /* ArtistaCustomCell.m */,
 				94DC66171BA1250200AC17BD /* CancionViewController.h */,
 				94DC66181BA1250200AC17BD /* CancionViewController.m */,
+				944032E71BA3BB930040D1B7 /* CancionCustomCell.h */,
+				944032E81BA3BB930040D1B7 /* CancionCustomCell.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 			files = (
 				9435C8221B7FE25F00516DA7 /* ViewController.m in Sources */,
 				9435C8461B7FF6BF00516DA7 /* ArtistaViewController.m in Sources */,
+				944032E91BA3BB930040D1B7 /* CancionCustomCell.m in Sources */,
 				945192321B90E9530020C19E /* Artista.m in Sources */,
 				94B7AE991B968E7E00F1EE04 /* SpotifySession.m in Sources */,
 				94DC66191BA1250200AC17BD /* CancionViewController.m in Sources */,
